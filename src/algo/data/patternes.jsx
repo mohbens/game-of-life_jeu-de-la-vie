@@ -206,7 +206,7 @@ const patterns = [
     ],
   },
 
-  //   {category: "", name: "", tab: []},
+  // {category: "aaa", name: "bbb", tab: []},
 ]
 
 function getTabByPatternName(name) {
@@ -214,7 +214,7 @@ function getTabByPatternName(name) {
 
   patterns.forEach((element) => {
     if (name === element.name) {
-      pattern = element
+      pattern = element.tab
     }
   })
   if (pattern === {}) {
