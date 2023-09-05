@@ -24,10 +24,10 @@ export const Resize = (Table, newSize) => {
   if (newSize < Table.length) {
     offset = Math.trunc((Table.length - newSize) / 2)
 
-    var newTab = []
+    newTab = []
 
     for (var a = 0; a < newSize; a++) {
-      var newLine = []
+      newLine = []
       for (var b = 0; b < newSize; b++) {
         newLine.push(Table[offset + a][offset + b])
       }

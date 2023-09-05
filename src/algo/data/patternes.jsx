@@ -209,38 +209,38 @@ const patterns = [
   // {category: "aaa", name: "bbb", tab: []},
 ]
 
-function getTabByPatternName(name) {
-  let pattern = {}
-
+export function getTabByPatternName(name) {
   patterns.forEach((element) => {
     if (name === element.name) {
-      pattern = element.tab
+      return element.tab
     }
   })
-  if (pattern === {}) {
-    return null
-  }
-
-  //   let filePath = pattern.name.toLower().replace(" ", "-") + ".json"
-  //   let tab = ''// load file content,
-  //   pattern['tab'] = tab;
-
-  return pattern
+  return null
 }
+// function handleClick(element) {
 
+// [(getTabByPatternName(element), setGridValues)] = useState(initValues)
+
+// }
 export function GetAllPatternNames() {
-  const elements = []
-  patterns.forEach((element) => {
-    elements.push(
-      <div className="onePattern">
-        <div className="patternName" key={element.name}>
-          {element.name}
-        </div>
+  return patterns
 
-        <img className="patternImg" src={element.img}></img>
-      </div>
-    )
-  })
-  console.log(elements)
-  return elements
+  // const elements = []
+  // patterns.forEach((element) => {
+  //   elements.push(
+  //     <div className="onePattern">
+  //       <div
+  //         className="patternName"
+  //         key={element.name}
+  //         // onClick={handleClick(element.name)}
+  //       >
+  //         {element.name}
+  //       </div>
+
+  //       <img className="patternImg" src={element.img} alt={element.name}></img>
+  //     </div>
+  //   )
+  // })
+  // console.log(elements)
+  // return elements
 }

@@ -53,7 +53,7 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-
+  background-color: rgb(230, 228, 228);
   left: 0;
   right: 0;
   top: 0;
@@ -72,4 +72,7 @@
 }
 .element {
   border-radius: 10px;
+}
+.element:hover {
+  background-color: rgb(11, 224, 3);
 }

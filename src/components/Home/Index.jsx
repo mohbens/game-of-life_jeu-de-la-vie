@@ -2,7 +2,10 @@ import "./style.scss"
 import {useState, useEffect} from "react"
 import {nextStep} from "../../algo/life.mjs"
 import {Resize} from "../../algo/resize.mjs"
-import {GetAllPatternNames} from "../../algo/data/patternes"
+import {
+  GetAllPatternNames,
+  getTabByPatternName,
+} from "../../algo/data/patternes"
 
 function CreatGrid(gridValues) {
   var height =
@@ -61,6 +64,43 @@ function Home() {
 
     setGridValues(Resize(gridValues, gridSize))
   }
+
+  // function handleClick(element) {
+  // setGridValues((getTabByPatternName(element))
+
+  // }
+  let handleClick = (element) => {
+    console.log(element.name)
+    setGridValues(element.tab)
+  }
+
+  function GetAllPatternsElements() {
+    const elements = []
+    const patterns = GetAllPatternNames()
+
+    patterns.forEach((element) => {
+      elements.push(
+        <div className="onePattern">
+          <div
+            className="patternName"
+            key={element.name}
+            onClick={() => handleClick(element)}
+          >
+            {element.name}
+          </div>
+
+          <img
+            className="patternImg"
+            src={element.img}
+            alt={element.name}
+          ></img>
+        </div>
+      )
+    })
+    // console.log(elements)
+    return elements
+  }
+
   return (
     <div className="home">
       <div className="header">
@@ -76,7 +116,7 @@ function Home() {
         </button>
         <div className="titlePattern">Patterns</div>
         <div className="patterns">
-          <GetAllPatternNames />
+          <GetAllPatternsElements />
         </div>
       </div>
       <div className="grid">{CreatGrid(gridValues)}</div>
