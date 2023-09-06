@@ -205,42 +205,20 @@ const patterns = [
       [0, 0, 0, 0, 0, 0, 0, 0],
     ],
   },
-
-  // {category: "aaa", name: "bbb", tab: []},
 ]
 
-export function getTabByPatternName(name) {
-  patterns.forEach((element) => {
-    if (name === element.name) {
-      return element.tab
-    }
+export function getTabByPatternName(Name) {
+  let pat = patterns.filter(function (e) {
+    return e.name === Name
   })
-  return null
+
+  if (pat[0]) {
+    return pat[0] ? pat[0].tab : null
+  }
 }
-// function handleClick(element) {
 
-// [(getTabByPatternName(element), setGridValues)] = useState(initValues)
-
-// }
 export function GetAllPatternNames() {
-  return patterns
-
-  // const elements = []
-  // patterns.forEach((element) => {
-  //   elements.push(
-  //     <div className="onePattern">
-  //       <div
-  //         className="patternName"
-  //         key={element.name}
-  //         // onClick={handleClick(element.name)}
-  //       >
-  //         {element.name}
-  //       </div>
-
-  //       <img className="patternImg" src={element.img} alt={element.name}></img>
-  //     </div>
-  //   )
-  // })
-  // console.log(elements)
-  // return elements
+  return patterns.map((element) => {
+    return {name: element.name, category: element.category, img: element.img}
+  })
 }

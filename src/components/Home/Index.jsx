@@ -38,9 +38,9 @@ function Home() {
 
   const initValues = [
     [0, 0, 0, 0, 0, 0],
-    [0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 1, 0, 0],
-    [0, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
   ]
@@ -65,13 +65,18 @@ function Home() {
     setGridValues(Resize(gridValues, gridSize))
   }
 
-  // function handleClick(element) {
-  // setGridValues((getTabByPatternName(element))
+  let handleClick = (paternName) => {
+    console.log(paternName)
 
-  // }
-  let handleClick = (element) => {
-    console.log(element.name)
-    setGridValues(element.tab)
+    const patern = getTabByPatternName(paternName)
+
+    if (patern.length <= gridSize) {
+      console.log("aaaasize")
+      setGridValues(Resize(patern, gridSize))
+    } else {
+      setGridValues(patern)
+      setGridSize(patern.length)
+    }
   }
 
   function GetAllPatternsElements() {
@@ -84,7 +89,7 @@ function Home() {
           <div
             className="patternName"
             key={element.name}
-            onClick={() => handleClick(element)}
+            onClick={() => handleClick(element.name)}
           >
             {element.name}
           </div>
@@ -97,7 +102,6 @@ function Home() {
         </div>
       )
     })
-    // console.log(elements)
     return elements
   }
 

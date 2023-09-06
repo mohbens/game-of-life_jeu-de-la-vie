@@ -49,8 +49,6 @@ function sum(tab) {
 export function nextStep(Tab) {
   const newTab = []
 
-  // const imaginaryTab = []
-
   for (var i = 0; i < Tab.length; i++) {
     const newLine = []
     var columns = Tab[i]
