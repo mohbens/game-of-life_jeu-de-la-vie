@@ -7,32 +7,6 @@ import {
   getTabByPatternName,
 } from "../../algo/data/patternes"
 
-function CreatGrid(gridValues) {
-  var height =
-    (gridValues[0].length === 0 ? 100 : 100 / gridValues[0].length) + "%"
-
-  var gridElements = []
-  gridValues.forEach((line, i) => {
-    var gridlines = []
-    line.forEach((box, j) => {
-      let style = box === 0 ? "white" : "black"
-      gridlines.push(
-        <div
-          className="element "
-          style={{backgroundColor: style, height: height}}
-        ></div>
-      )
-    })
-    gridElements.push(
-      <div className="line" style={{width: height}}>
-        {gridlines}
-      </div>
-    )
-  })
-
-  return gridElements
-}
-
 function Home() {
   const [active, activate] = useState(false)
 
@@ -66,17 +40,53 @@ function Home() {
   }
 
   let handleClick = (paternName) => {
-    console.log(paternName)
-
     const patern = getTabByPatternName(paternName)
 
     if (patern.length <= gridSize) {
-      console.log("aaaasize")
       setGridValues(Resize(patern, gridSize))
     } else {
       setGridValues(patern)
       setGridSize(patern.length)
     }
+  }
+  function CreatGrid(gridValues) {
+    var height =
+      (gridValues[0].length === 0 ? 100 : 100 / gridValues[0].length) + "%"
+
+    var gridElements = []
+    gridValues.forEach((line, i) => {
+      var gridlines = []
+      line.forEach((box, j) => {
+        let style = box === 0 ? "white" : "black"
+        gridlines.push(
+          <div
+            className="element  "
+            style={{backgroundColor: style, height: height}}
+            onClick={() => liveOrDie(i, j)}
+          ></div>
+        )
+      })
+      gridElements.push(
+        <div className="line" style={{width: height}}>
+          {gridlines}
+        </div>
+      )
+    })
+
+    return gridElements
+  }
+
+  function liveOrDie(i, j) {
+    let newValues = [...gridValues]
+    console.log(i, j)
+    if (newValues[i][j] === 0) {
+      newValues[i][j] = 1
+      console.log("live")
+    } else {
+      newValues[i][j] = 0
+      console.log("die")
+    }
+    setGridValues(newValues)
   }
 
   function GetAllPatternsElements() {
