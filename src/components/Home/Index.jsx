@@ -60,7 +60,7 @@ function Home() {
         let style = box === 0 ? "white" : "black"
         gridlines.push(
           <div
-            className="element  "
+            className={"element " + style}
             style={{backgroundColor: style, height: height}}
             onClick={() => liveOrDie(i, j)}
           ></div>
