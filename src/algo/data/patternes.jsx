@@ -2,7 +2,7 @@ const patterns = [
   {
     category: "Still lifes",
     name: "Block",
-    img: "/assets/Block.svg.png",
+    img: "/game-of-life_jeu-de-la-vie/assets/Block.svg.png",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0],
@@ -15,7 +15,7 @@ const patterns = [
   {
     category: "Still lifes",
     name: "Bee Hive",
-    img: "/assets/BeeHive.svg.png",
+    img: "/game-of-life_jeu-de-la-vie/assets/BeeHive.svg.png",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 1, 1, 0, 0],
@@ -28,7 +28,7 @@ const patterns = [
   {
     category: "Still lifes",
     name: "Loaf",
-    img: "/assets/Loaf.svg.png",
+    img: "/game-of-life_jeu-de-la-vie/assets/Loaf.svg.png",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 1, 1, 0, 0],
@@ -41,7 +41,7 @@ const patterns = [
   {
     category: "Still lifes",
     name: "Boat",
-    img: "/assets/Boat.svg.png",
+    img: "/game-of-life_jeu-de-la-vie/assets/Boat.svg.png",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0],
@@ -54,7 +54,7 @@ const patterns = [
   {
     category: "Still lifes",
     name: "Tub",
-    img: "/assets/Tub.svg.png",
+    img: "/game-of-life_jeu-de-la-vie/assets/Tub.svg.png",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0],
@@ -67,7 +67,7 @@ const patterns = [
   {
     category: "Oscillators",
     name: "Blinker",
-    img: "/assets/Blinker.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Blinker.gif",
     tab: [
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
@@ -79,7 +79,7 @@ const patterns = [
   {
     category: "Oscillators",
     name: "Toad",
-    img: "/assets/Toad.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Toad.gif",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0],
@@ -92,7 +92,7 @@ const patterns = [
   {
     category: "Oscillators",
     name: "Beacon",
-    img: "/assets/Beacon.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Beacon.gif",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 1, 1, 0, 0, 0],
@@ -105,7 +105,7 @@ const patterns = [
   {
     category: "Oscillators",
     name: "Pulsar",
-    img: "/assets/Pulsar.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Pulsar.gif",
     tab: [
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -129,7 +129,7 @@ const patterns = [
   {
     category: "Oscillators",
     name: "Penta-Decathlon",
-    img: "/assets/Penta-decathlon.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Penta-decathlon.gif",
     tab: [
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -150,7 +150,7 @@ const patterns = [
   {
     category: "Spaceships",
     name: "Glider",
-    img: "/assets/Glider.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Glider.gif",
     tab: [
       [0, 0, 0, 0, 0, 0],
       [0, 0, 1, 0, 0, 0],
@@ -163,7 +163,7 @@ const patterns = [
   {
     category: "Spaceships",
     name: "Light weight spaceship ",
-    img: "/assets/LWSS.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/LWSS.gif",
     tab: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -178,7 +178,7 @@ const patterns = [
   {
     category: "Spaceships",
     name: "Middle weight spaceship",
-    img: "/assets/Mwss.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Mwss.gif",
     tab: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -193,7 +193,7 @@ const patterns = [
   {
     category: "Spaceships",
     name: "Heavy weight spaceship",
-    img: "/assets/Hwss.gif",
+    img: "/game-of-life_jeu-de-la-vie/assets/Hwss.gif",
     tab: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
