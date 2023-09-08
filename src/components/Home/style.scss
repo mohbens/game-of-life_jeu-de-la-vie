@@ -11,10 +11,15 @@
   justify-content: center;
   max-height: 90vh;
 }
+.gridSize {
+  display: flex;
 
+  align-items: center;
+  justify-content: space-between;
+}
 .btn {
   height: 25px;
-  width: 177px;
+  width: auto;
   margin-top: 5px;
 }
 .patternImg {
@@ -24,6 +29,11 @@
   border: dashed;
 
   width: 50px;
+}
+#input {
+  width: auto;
+  height: 20px;
+  margin-left: 5px;
 }
 
 .onePattern {

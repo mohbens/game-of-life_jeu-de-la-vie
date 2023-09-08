@@ -18,9 +18,9 @@ function Home() {
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
   ]
-  const [gridSize, setGridSize] = useState(initValues.length)
+  const [gridSize, setGridSize] = useState(20)
 
-  var [gridValues, setGridValues] = useState(initValues)
+  var [gridValues, setGridValues] = useState(Resize(initValues, 20))
 
   const startStop = () => {
     activate(!active)
@@ -118,13 +118,16 @@ function Home() {
   return (
     <div className="home">
       <div className="header">
-        <input
-          id="input"
-          type="number"
-          onChange={(e) => updateSize(e.target.value)}
-          value={gridSize}
-          step="2"
-        />
+        <div className="gridSize">
+          <p>Grid size </p>
+          <input
+            id="input"
+            type="number"
+            onChange={(e) => updateSize(e.target.value)}
+            value={gridSize}
+            step="2"
+          />
+        </div>
         <button className="btn" onClick={startStop}>
           {active ? "stop" : "start"}
         </button>
