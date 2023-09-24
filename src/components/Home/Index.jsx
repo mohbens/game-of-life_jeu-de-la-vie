@@ -136,7 +136,9 @@ function Home() {
           <GetAllPatternsElements />
         </div>
       </div>
-      <div className="grid">{CreatGrid(gridValues)}</div>
+      <div className="aaagrid">
+        <div className="grid">{CreatGrid(gridValues)}</div>
+      </div>
     </div>
   )
 }
